@@ -1,0 +1,28 @@
+
+no randomly shift values within these cells not any new number B1431:E2728
+ChatGPT
+I see what you mean. If you want to randomly shift the values within the same range B1431:E2728 without introducing any new numbers, you can use a formula in Excel. Here's a method to achieve this:
+
+Open your CSV file in Excel.
+
+In an empty column (let's say, column F), you can use a formula to randomly shuffle the values within the range B1431:E2728. You can use the following formula in cell F1431 and then copy it down to F2728:
+
+excel
+Copy code
+=INDEX($B$1431:$E$2728, RANDBETWEEN(1, ROWS($B$1431:$E$2728)), RANDBETWEEN(1, COLUMNS($B$1431:$E$2728)))
+This formula uses the INDEX function to select a random value from the range B1431:E2728 using RANDBETWEEN to generate random row and column numbers within the specified range.
+
+Once you've entered the formula in cell F1431, copy it down to cover all the cells in the range F1431:F2728.
+
+After the formulas have been copied down, you will have the values shuffled randomly within the same range in column F.
+
+If you want to keep the shuffled values and remove the original values, you can copy the values from column F and paste them over the original range B1431:E2728 as values.
+
+Now, your original values in the range B1431:E2728 will be randomly shuffled within the same cells, and you can save the file as a CSV if needed.
+
+
+=INDEX($B$1431:$E$2728, RANDBETWEEN(1, ROWS($B$1431:$E$2728)), RANDBETWEEN(1, COLUMNS($B$1431:$E$2728)))
+
+
+
+=INDEX($B$1431:$E$2728, RANDBETWEEN(1, ROWS($B$1431:$E$2728)), RANDBETWEEN(1, COLUMNS($B$1431:$E$2728)))
